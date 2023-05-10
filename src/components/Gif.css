@@ -1,0 +1,79 @@
+.gif-card {
+  position: relative;
+  background: #005f73;
+  overflow: hidden;
+  border-radius: 0px;
+
+  transition: border-radius 0.1s ease-in;
+}
+
+.gif-card >img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gif-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255, 0.2);
+  padding: 8px 4px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transform: translateY(0%);
+
+  transition: transform 0.1s ease-in;
+}
+
+.gif-info >.description {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.description >.title,
+.description >.username {
+  margin: 0px;
+  color: #fff;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.username {
+  font-weight: 500;
+}
+
+.gif-info >img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 997px) {
+  .gif-card {
+    border-radius: 15px;
+
+    .gif-info {
+      transform: translateY(105%);
+    }
+
+    &:hover {
+      border-radius: 0px;
+    
+      .gif-info {
+        transform: translateY(0%);
+      }
+    }
+  }
+}

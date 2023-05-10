@@ -9,9 +9,9 @@ export function getGifs(keyword = "luffy") {
       const { data } = response;
 
       const gifs = data.map((gifData) => {
-        const { images, title, id } = gifData;
+        const { images, title, id, user } = gifData;
 
-        return { title, id, images };
+        return { title, id, images, user };
       });
 
       return gifs;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import Gif from "./Gif";
 import { getGifs } from "../services/gifService";
+import "./GifList.css";
 
 export default function GifList({ keyword }) {
   const [gifs, setGifs] = useState([]);
@@ -10,7 +11,13 @@ export default function GifList({ keyword }) {
     getGifs(keyword).then((gifs) => setGifs(gifs));
   }, [keyword]);
 
-  return gifs.map(({ id, title, images }) => (
-    <Gif key={id} title={title} images={images} id={id} />
-  ));
+  return (
+    <section className="gif-list">
+      {gifs.map(({ id, title, images, user }) => (
+        <div className="gif-container" key={id}>
+          <Gif title={title} images={images} id={id} user={user} />
+        </div>
+      ))}
+    </section>
+  );
 }
