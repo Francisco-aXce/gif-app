@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import "./Home.css";
 import { useLocation } from "wouter";
-import useGifs from "../../hooks/useGifs";
-import GifList from "../../components/GifList";
-import Spinner from "../../components/Spinner";
+import useGifs from "hooks/useGifs";
+import GifList from "components/GifList";
+import Spinner from "components/Spinner";
 
 export default function Home() {
   const [keyword, setKeyword] = useState("");

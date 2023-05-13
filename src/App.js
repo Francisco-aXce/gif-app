@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.css";
+import "App.css";
 import { Route } from "wouter";
-import Home from "./pages/Home";
-import Detail from "./pages/Detail";
-import SearchResults from "./components/SearchResults";
-import { GifsContextProvider } from "./context/GifsContext";
+import Home from "pages/Home";
+import Detail from "pages/Detail";
+import SearchResults from "components/SearchResults";
+import { GifsContextProvider } from "context/GifsContext";
 
 function App() {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 
-import useGifs from "../../hooks/useGifs";
-import Spinner from "../Spinner";
-import GifList from "../GifList";
+import useGifs from "hooks/useGifs";
+import Spinner from "components/Spinner";
+import GifList from "components/GifList";
 
 export default function SearchResults({ params, title }) {
   const { keyword } = params;
