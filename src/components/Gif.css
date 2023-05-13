@@ -1,16 +1,17 @@
 .gif-card {
+  display: block;
   position: relative;
-  background: #005f73;
   overflow: hidden;
   border-radius: 0px;
+  margin-bottom: var(--gridList-gap, 6px);
 
   transition: border-radius 0.1s ease-in;
 }
 
 .gif-card >img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: block;
+  /* object-fit: contain; */
 }
 
 .gif-info {

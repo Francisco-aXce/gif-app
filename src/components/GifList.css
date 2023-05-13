@@ -1,17 +1,9 @@
-.gif-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
+:root {
+  --gridList-column: 250px;
+  --gridList-gap: 6px;
 }
 
-.gif-container {
-  width: 450px;
-  height: 270px;
-
-  .gif-card {
-    width: 100%;
-    height: 100%;
-  }
+.gif-list {
+  columns: 5 var(--gridList-column);
+  column-gap: var(--gridList-gap);
 }

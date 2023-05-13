@@ -4,7 +4,9 @@ import Gif from "./Gif";
 import { getGifs } from "../services/gifService";
 import "./GifList.css";
 
-export default function GifList({ keyword }) {
+export default function GifList({ params }) {
+  const { keyword } = params;
+
   const [gifs, setGifs] = useState([]);
 
   useEffect(() => {
@@ -14,9 +16,7 @@ export default function GifList({ keyword }) {
   return (
     <section className="gif-list">
       {gifs.map(({ id, title, images, user }) => (
-        <div className="gif-container" key={id}>
-          <Gif title={title} images={images} id={id} user={user} />
-        </div>
+        <Gif key={id} title={title} images={images} id={id} user={user} />
       ))}
     </section>
   );
