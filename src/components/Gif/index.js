@@ -5,7 +5,7 @@ import "./Gif.css";
 
 export default function Gif({ title, id, images, user }) {
   return (
-    <Link to={`/gifs/${id}`} className="gif-card">
+    <Link to={`/detail/${id}`} className="gif-card">
       <img src={images.downsized_large.url} alt={title} />
       <div className="gif-info">
         {user && <img src={user.avatar_url} alt={user.display_name} />}
