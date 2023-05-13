@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { getGifs } from "services/gifService";
+import { getGifs } from "services/getGifs";
 import GifsContext from "context/GifsContext";
 
 export default function useGifs({ keyword }) {

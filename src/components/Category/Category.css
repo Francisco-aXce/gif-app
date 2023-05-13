@@ -1,0 +1,32 @@
+.category {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  max-width: 80px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 0 12px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #f8f9fa;
+  background: #2b2d42;
+  opacity: 0.2;
+
+  transition: opacity 0.1s ease-in;
+}
+
+.category:hover,
+.category:focus-visible
+{
+  opacity: 1;
+  outline: none; 
+}
+
+.category span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
