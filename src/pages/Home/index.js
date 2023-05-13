@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <section className="container">
       <h1 className="app-title center">GMotion</h1>
       <form onSubmit={handleSearch}>
         <div className="search">
@@ -51,6 +51,6 @@ export default function Home() {
         <h2 className="app-title">Last search</h2>
         {loading ? <Spinner /> : <GifList gifs={gifs}></GifList>}
       </section>
-    </>
+    </section>
   );
 }
