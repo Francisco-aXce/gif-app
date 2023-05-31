@@ -13,8 +13,8 @@ export default function TrendingSearches() {
 
   return (
     <div className="trend-container">
-      {trends.map((trend) => (
-        <Category name={trend} />
+      {trends.map((trend, index) => (
+        <Category key={index} name={trend} />
       ))}
     </div>
   );
