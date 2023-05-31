@@ -6,7 +6,6 @@ import "./Home.css";
 import { useLocation } from "wouter";
 import useGifs from "hooks/useGifs";
 import GifList from "components/GifList";
-import Spinner from "components/Spinner";
 import TrendingSearches from "components/TrendingSearches";
 
 export default function Home() {
@@ -49,7 +48,7 @@ export default function Home() {
       </form>
       <section>
         <h2 className="app-title">Last search</h2>
-        {loading ? <Spinner /> : <GifList gifs={gifs}></GifList>}
+        <GifList gifs={gifs} loading={loading}></GifList>
       </section>
     </section>
   );

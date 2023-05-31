@@ -4,6 +4,7 @@
 }
 
 .gif-list {
+  display: block;
   columns: 5 var(--gridList-column);
   column-gap: var(--gridList-gap);
 }
