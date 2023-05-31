@@ -3,7 +3,7 @@ import { getGifs } from "services/getGifs";
 import GifsContext from "context/GifsContext";
 
 export default function useGifs({ keyword }) {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const { gifs, setGifs } = useContext(GifsContext);
 
   useEffect(() => {

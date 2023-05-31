@@ -3,7 +3,7 @@ import "App.css";
 import { Route } from "wouter";
 import Home from "pages/Home";
 import Detail from "pages/Detail";
-import SearchResults from "components/SearchResults";
+import SearchResults from "pages/SearchResults";
 import { GifsContextProvider } from "context/GifsContext";
 
 function App() {
